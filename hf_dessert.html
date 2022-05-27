@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <title>하프클럽</title>
+   <link href="http://static-s.halfclub.com/cdn_hp/components/assets/css/default.css" type="text/css" media="all" rel="stylesheet">
+   <script type="text/javascript" src="http://static-s.halfclub.com/cdn_hp/components/assets/js/jquery-3.3.1.min.js"></script><!--v3.3.1-->
+   <script type="text/javascript" src="http://static-s.halfclub.com/cdn_hp/components/assets/js/swiper.min.js"></script><!--v4.4.6-->
+   <script type="text/javascript" src="http://static-s.halfclub.com/cdn_hp/components/assets/js/placeholders.min.js"></script><!--v4.0.1-->
+   <script type="text/javascript" src="http://static-s.halfclub.com/cdn_hp/components/assets/js/jquery.scrollbar.min.js"></script>
+   <script type="text/javascript" src="http://static-s.halfclub.com/cdn_hp/components/assets/js/zoom-image.js"></script>
+   <script type="text/javascript" src="http://static-s.halfclub.com/cdn_hp/components/assets/js/jquery.rating-stars.min.js"></script>
+   <script type="text/javascript" src="http://static-s.halfclub.com/cdn_hp/components/assets/js/common.js"></script>
+	<script type="text/javascript" src="http://static-s.halfclub.com/cdn_hp/components/assets/js/event.common.js"></script>
+   <!--[if lt IE 9]><script type="text/javascript">document.createElement("header");document.createElement("nav");document.createElement("section");document.createElement("article");document.createElement("footer");</script><![endif]-->
+</head>
+<body>
+    <style>
+        html{overflow: hidden;}
+        html, body{width: 100%; height: 100%;}
+        .content{width: 100%;  height: 100%; max-width: 2200px; position: relative;}
+        .fixed{position: fixed; z-index: 9;}
+        .halfclub{ top: 5%; right: 5%;}
+        ul.link_area{width: auto; height: auto; top: 82%; right: 4%;}
+        ul.link_area li{width: auto; height: auto;}
+        ul.link_area li:last-child{margin-top: 5px;}
+        ul.link_area li a{width: 100%; height: 100%; display: block;}
+        .scroll{width: 84px; height: 96px; top: 85%; left: 50%; transform: translateX(-50%); cursor: inherit;}
+        /* visual */
+        .visual{animation: fade 10s linear infinite;background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/visual_01.jpg) no-repeat center 0; background-size: 100%;}
+        .visual .visual_logo{position: absolute; top: 50%; left: 50%; transform:  translateX(-50%) translateY(-50%);}
+        @keyframes fade {
+            0%{background:url("https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/visual_01.jpg") no-repeat center 0; }
+            15% {background:url("https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/visual_02.jpg") no-repeat center 0; }
+            40% { background:url("https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/visual_03.jpg") no-repeat center 0; } 
+            65%{ background:url("https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/visual_04.jpg") no-repeat center 0; } 
+            90%{ background:url("https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/visual_05.jpg") no-repeat center 0; }
+            100%{ background:url("https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/visual_01.jpg") no-repeat center 0; }
+        }
+        /* content1 */
+        .content1{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_1.jpg) no-repeat center 0; background-size: 100%;}
+        .content1 .txt{width: 32%; height: auto; position: absolute; top: 18%; right: 7%;}
+        /* content2 */
+        .content2{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_2.jpg) no-repeat center 0; background-size: 100%;}
+        .content2 .txt{position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%);}
+        /* content3 */
+        .content3{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_3.jpg) no-repeat center 0; background-size: 100%;}
+        /* content4 */
+        .content4{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_4.jpg) no-repeat center 0; background-size: 100%;}
+        .content4 .list_up{width: 24%; height: 88%; animation: listUp 2s ease-in-out infinite; position: absolute; top: 13%; left: 7%; background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/list-up.png) no-repeat 0 0; background-size: 100%;}
+        .content4 .list_up.on{animation: listUpOn 1s linear 1;}
+        /* 리스트 둥둥 효과 */
+        @keyframes listUp{
+            0%{top:13%}
+            50%{top:16%;}
+            100%{top:13%;}
+        }
+        /* content5 */
+        .content5{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_5.jpg) no-repeat center 0; background-size: 100%;}
+        .content5 .txt{position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%);}
+        /* content6 */
+        .content6{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_6.jpg) no-repeat center 0; background-size: 100%;}
+        .content6 .txt{width: 18%; height: auto; position: absolute; top: 60%; right: 10%;}
+        /* content7 */
+        .content7{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_7.jpg) no-repeat center 0; background-size: 100%;}
+        .content7 .txt{width: 41%; height: auto; position: absolute; top: 9%; left: 4%;}
+        /* content8 */
+        .content8{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_8.jpg) no-repeat center 0; background-size: 100%;}
+        .content8 .txt{width: 33%; height: auto; position: absolute; top: 50%; right: 10%;}
+        /* content9 */
+        .content9{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_9.jpg) no-repeat center 0; background-size: 100%;}
+        .content9 .txt{position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%);}
+        /* content10 */
+        .content10{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_10.jpg) no-repeat center 0; background-size: 100%;}
+        .content10 ul.popup_area{width: 84.5%; height: auto; display: flex; flex-direction: row; justify-content: space-between; position: absolute; top: 55%; left: 50%; transform: translateY(-50%) translateX(-50%);}
+        .content10 ul.popup_area li{width: 16%; cursor: pointer;}
+        .content10 ul.popup_txt{width: 100%; height: 100%;}
+        .content10 ul.popup_txt li{width: 100%; height: 100%; position: absolute; z-index: 1;}
+        .content10 .btn_close{width: 71px; height: 71px; position: absolute; top: 13.3%; right: 24%; z-index: 2; background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/btn_close.png) no-repeat 0 0; background-size: 100%;}
+        /* content11 */
+        .content11{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_11.jpg) no-repeat center 0; background-size: 100%;}
+        .content11 .txt{position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%);}
+        /* content12 */
+        .content12{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_12.jpg) no-repeat center 0; background-size: 100%;}
+        .content12 a{display: block; position: absolute;}
+        .content12 .link1{width: 17%; height: 37%; top: 32%; left: 10%;}
+        .content12 .link2{width: 8.8%; height: 37%; top: 32%; left: 31%;}
+        .content12 .link3{width: 8.8%; height: 20%; top: 40%; left: 39.9%;}
+        .content12 .link4{width: 17%; height: 37%; top: 32%; right: 31.5%;}
+        .content12 .link5{width: 17%; height: 37%; top: 32%; right: 11.2%;}
+        /* content13 */
+        .content13{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_13.jpg) no-repeat center 0; background-size: 100%;}
+        .content13 a{display: block; position: absolute;}
+        .content13 .link1{width: 20%; height: 37%; top: 32%; left: 8%;}
+        .content13 .link2{width: 18%; height: 37%; top: 32%; left: 30%;}
+        .content13 .link3{width: 17%; height: 37%; top: 32%; right: 30.5%;}
+        .content13 .link4{width: 17%; height: 37%; top: 32%; right: 11.2%;}
+        /* content14 */
+        .content14{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_14.jpg) no-repeat center 0; background-size: 100%;}
+        .content14 a{display: block; position: absolute;}
+        .content14 .link1{width: 8.8%; height: 37%; top: 32%; left: 9%;}
+        .content14 .link2{width: 8.8%; height: 37%; top: 32%; left: 18.2%;}
+        .content14 .link3{width: 18%; height: 37%; top: 32%; left: 30%;}
+        .content14 .link4{width: 17%; height: 17.5%; top: 37%; right: 31.5%;}
+        .content14 .link5{width: 17%; height: 13%; top: 56%; right: 31.5%;}
+        .content14 .link6{width: 17%; height: 37%; top: 32%; right: 11.2%;}
+        /* content15 */
+        .content15{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_15.jpg) no-repeat center 0; background-size: 100%;}
+        .content15 a{display: block; position: absolute;}
+        .content15 .link1{width: 20%; height: 37%; top: 32%; left: 8%;}
+        .content15 .link2{width: 18%; height: 37%; top: 32%; left: 30%;}
+        .content15 .link3{width: 17%; height: 37%; top: 32%; right: 31.5%;}
+        .content15 .link4{width: 17%; height: 37%; top: 32%; right: 11.2%;}
+        /* content16 */
+        .content16{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_16.jpg) no-repeat center 0; background-size: 100%;}
+        /* content17 */
+        .content17{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_17.jpg) no-repeat center 0; background-size: 100%;}
+        /* content18 */
+        .content18{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_18.jpg) no-repeat center 0; background-size: 100%;}
+        /* content19 */
+        .content19{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_19.jpg) no-repeat center 0; background-size: 100%;}
+        .content19 .link{width: 321px; height: 60px; display: block; position: absolute; top: 69%; left: 50%; transform: translateX(-50%); background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/btn_buy_txt.png) no-repeat center center #000;}
+        .content19 .link:hover{animation: buy-hover 0.2s ease-in-out 1;background-color: rgb(150, 150, 150);}
+        /* content20 */
+        .content20{background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/content_20.jpg) no-repeat center 0; background-size: 100%;}
+        .content20 .link{width: 321px; height: 60px; display: block; position: absolute; top: 76%; left: 50%; transform: translateX(-50%); background: url(https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/btn_go_txt.png) no-repeat center center #000;}
+        .content20 .link:hover{animation: go-hover 0.2s ease-in-out 1;background-color: #004ece;}
+    
+        /* 구매하러가기 버튼 효과 */
+        @keyframes buy-hover{
+            0%{background-color: #000;}
+            100%{background-color: rgb(150, 150, 150);}
+        }
+        /* 추천상품 바로가기 버튼 효과 */
+        @keyframes go-hover{
+            0%{background-color: #000;}
+            100%{background-color: #004ece;}
+        }
+        /* content.on */
+        .content .txt{opacity: 0;}
+        .content.on .txt{animation: fade-in 0.8s ease-in 1; opacity: 1;}
+        /* 스크롤시 fode 효과 */
+        @keyframes fade-in{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+    </style>
+    <!-- fixed -->
+    <a href="http://www.halfclub.com/" class="halfclub fixed" target="_blank"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/hlafclub.png" alt=""></a>
+    <ul class="link_area fixed">
+        <li><a onclick="linkShare();"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/btn_share.png" alt=""></a></li>
+        <li><a href="http://www.halfclub.com/event/main?planNo=62023" target="_blank"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/btn_more.png" alt=""></a></li>
+    </ul>
+    <button class="scroll fixed"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/scroll.gif" alt=""></button>
+    <!-- // fixed -->
+
+    <div class="content visual">
+        <div class="visual_logo"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/visual_logo.png" alt=""></div>
+    </div><!-- // visual -->
+
+    <div class="content content1">
+        <div class="txt"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/cnt1_fade.png" alt=""></div>
+    </div><!-- // content1 -->
+
+    <div class="content content2">
+        <div class="txt"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/cnt2_fade.png" alt=""></div>
+    </div><!-- // content2 -->
+
+    <div class="content content3">
+    </div><!-- // content3 -->
+
+    <div class="content content4">
+        <div class="list_up"></div>
+    </div><!-- // content4 -->
+
+    <div class="content content5">
+        <div class="txt"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/cnt5_fade.png" alt=""></div>
+    </div><!-- // content5 -->
+
+    <div class="content content6">
+        <div class="txt"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/cnt6_fade.png" alt=""></div>
+    </div><!-- // content6 -->
+
+    <div class="content content7">
+        <div class="txt"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/cnt7_fade.png" alt=""></div>
+    </div><!-- // content7 -->
+
+    <div class="content content8">
+        <div class="txt"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/cnt8_fade.png" alt=""></div>
+    </div><!-- // content8 -->
+
+    <div class="content content9">
+        <div class="txt"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/cnt9_fade.png" alt=""></div>
+    </div><!-- // content9 -->
+
+    <div class="content content10">
+        <ul class="popup_area">
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_click_01.jpg" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_click_02.jpg" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_click_03.jpg" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_click_04.jpg" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_click_05.jpg" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_click_06.jpg" alt=""></li>
+        </ul><!-- // popup_area -->
+        <ul class="popup_txt">
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_01.png" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_02.png" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_03.png" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_04.png" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_05.png" alt=""></li>
+            <li><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/popup_06.png" alt=""></li>
+        </ul><!-- // popup_txt -->
+        <button class="btn_close"></button>
+    </div><!-- // content10 -->
+
+    <div class="content content11">
+        <div class="txt"><img src="https://cdn.halfclub.com/Images_Web/2022/20220524_hf_dessert_62023/cnt11_fade.png" alt=""></div>
+    </div><!-- // content11 -->
+
+    <div class="content content12">
+        <a href="http://www.halfclub.com/#!/product/160925449" class="link1" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/169000953" class="link2" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/169001026" class="link3" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/318568486" class="link4" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/event/main?planNo=17186" class="link5" target="_blank"></a>
+    </div><!-- // content12 -->
+
+    <div class="content content13">
+        <a href="http://www.halfclub.com/#!/product/153019734" class="link1" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/310580199" class="link2" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/144843734" class="link3" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/316540526" class="link4" target="_blank"></a>
+    </div><!-- // content13 -->
+
+    <div class="content content14">
+        <a href="http://www.halfclub.com/#!/product/323356769" class="link1" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/323356784" class="link2" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/300143490" class="link3" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/323327528" class="link4" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/323327515" class="link5" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/deal/300341777" class="link6" target="_blank"></a>
+    </div><!-- // content14 -->
+
+    <div class="content content15">
+        <a href="http://www.halfclub.com/#!/product/318997964" class="link1" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/319999201" class="link2" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/322916795" class="link3" target="_blank"></a>
+        <a href="http://www.halfclub.com/#!/product/321684777" class="link4" target="_blank"></a>
+    </div><!-- // content15 -->
+
+    <div class="content content16">
+    </div><!-- // content16 -->
+
+    <div class="content content17">
+    </div><!-- // content17 -->
+
+    <div class="content content18">
+    </div><!-- // content18 -->
+
+    <div class="content content19">
+        <a href="http://www.halfclub.com/#!/event/main?planNo=17186" class="link" target="_blank"></a>
+    </div><!-- // content19 -->
+
+    <div class="content content20">
+        <a href="http://www.halfclub.com/#!/event/main?planNo=62023" class="link" target="_blank"></a>
+    </div><!-- // content20 -->
+
+    <script type="text/javascript">
+        // 마우스 휠
+        window.addEventListener("wheel", function(e){
+            e.preventDefault();
+        },{passive : false});
+
+        var $html = $("html");
+        var page = 1;
+        var lastPage = $(".content").length;
+        $html.animate({scrollTop:0},10);
+
+        $(window).on("wheel", function(e){
+            if($html.is(":animated")) return;
+            if(e.originalEvent.deltaY > 0){
+                if(page == lastPage) return;
+                page++;
+            }else if(e.originalEvent.deltaY < 0){
+                if(page == 1) return;
+                page--;
+            }
+            var posTop = (page-1) * $(window).height();
+            $html.animate({scrollTop : posTop});
+        });
+        // 링크 공유하기
+        function linkShare(){
+            prompt('복사 후 공유해주세요~♥','http://static-s.halfclub.com/cdn_hp/components/event/dessert/hf_dessert.html');
+        }
+        // popup
+        $(function(){
+            var popup_area = $('.popup_area li'), popup_txt = $('.popup_txt li'), btn_close = $('.btn_close');
+            popup_txt.hide();
+            btn_close.hide();
+            popup_area.click(function(){
+                var idx = $(this).index();
+                popup_txt.eq(idx).show();
+                btn_close.show();
+            });
+            btn_close.click(function(){
+                popup_txt.hide();
+                $(this).hide();
+            });
+        });
+        // fade 효과를 위한 on
+		$(window).scroll(function(){
+            var winScroll = $(window).scrollTop();
+            var cnt1_offset = $('.content1').offset().top-200;
+            var cnt2_offset = $('.content2').offset().top-200;
+            var cnt4_offset = $('.content4').offset().top-200;
+            var cnt5_offset = $('.content5').offset().top-200;
+            var cnt6_offset = $('.content6').offset().top-200;
+            var cnt7_offset = $('.content7').offset().top-200;
+            var cnt8_offset = $('.content8').offset().top-200;
+            var cnt9_offset = $('.content9').offset().top-200;
+            var cnt11_offset = $('.content11').offset().top-200;
+            if(winScroll > cnt1_offset){
+                $('.content1').addClass('on');
+            }
+            if(winScroll > (cnt2_offset)){
+                $('.content1').removeClass('on');
+                $('.content2').addClass('on');
+            }
+            if(winScroll > cnt5_offset){
+                $('.content2').removeClass('on');
+                $('.content5').addClass('on');
+            }
+            if(winScroll > cnt6_offset){
+                $('.content5').removeClass('on');
+                $('.content6').addClass('on');
+            }
+            if(winScroll > cnt7_offset){
+                $('.content6').removeClass('on');
+                $('.content7').addClass('on');
+            }
+            if(winScroll > cnt8_offset){
+                $('.content7').removeClass('on');
+                $('.content8').addClass('on');
+            }
+            if(winScroll > cnt9_offset){
+                $('.content8').removeClass('on');
+                $('.content9').addClass('on');
+            }
+            if(winScroll > cnt11_offset){
+                $('.content9').removeClass('on');
+                $('.content11').addClass('on');
+            }
+        });
+    </script>
+</body>
+</html>
+
