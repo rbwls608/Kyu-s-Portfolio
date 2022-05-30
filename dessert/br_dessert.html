@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>보리보리</title>
+    <link href="http://static-s.halfclub.com/cdn_bm/components/assets/css/default.css" type="text/css" media="all" rel="stylesheet">
+    <script type="text/javascript" src="http://static-s.halfclub.com/cdn_bm/components/assets/js/jquery-3.3.1.min.js"></script><!-- // v3.3.1 -->
+    <script type="text/javascript" src="http://static-s.halfclub.com/cdn_bm/components/assets/js/swiper.min.js"></script><!-- // v4.4.6 -->
+    <script type="text/javascript" src="http://static-s.halfclub.com/cdn_bm/components/assets/js/ixBand.min.js"></script><!-- // v1.2.2 -->
+    <script type="text/javascript" src="http://static-s.halfclub.com/cdn_bm/components/assets/js/ixSnack.min.js"></script><!-- // v0.6.2 -->
+    <script type="text/javascript" src="http://static-s.halfclub.com/cdn_bm/components/assets/js/common_maria.js"></script>
+    <script type="text/javascript" src="http://static-s.halfclub.com/cdn_bm/components/assets/js/jquery.rwdImageMaps.js"></script>
+ </head>
+<body>
+  <style type="text/css">
+    .local_wrap { position:relative;overflow:hidden;width:100%;vertical-align:top; }
+    .local_wrap * { font-weight:inherit;font-size:inherit;line-height:inherit;letter-spacing:inherit;font-family:'Apple SD Gothic Neo',AppleGothic,'Malgun Gothic',Dotum,sans-serif; }
+    .local_wrap img, .local_wrap a { display:block;width:100%;margin:0;padding:0;line-height:0;vertical-align:top; }
+    .local_wrap ul { margin:0;padding:0; }
+    .local_wrap li { list-style:none; }
+    /* bodyVisual */
+    #bodyVisual{position: relative; height: 9.8rem;}
+    #bodyVisual .flight_visual{position: absolute; top: 0.21rem; height: 13rem; z-index: 9;}
+    #bodyVisual .flight_visual img{width: 100%; height: 100%;}
+    /* body1 */
+    #body1{ position: relative; height: 20.39rem; background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/m_01.jpg) no-repeat 0 0; background-size: 100%;}
+    #body1 .white_board{position: absolute; top: 35%; width: 7.2rem; height: 12.28rem; background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight01_white_board.png) no-repeat 0 0; background-size: 100%;}
+    #body1 .swiper01 {position: absolute; top: 36%; width: 7.2rem;  }
+    #body1 .swiper-wrapper .swiper-slide{  width: 5.99rem; margin: 0.66rem;}
+    #body1 .swiper-button{position: absolute;transform: translateY(-50%);width: .75rem;height: .75rem; top: 40%; z-index:11;}
+		#body1 .swiper-button-next0 {right: 0;background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/btn_next.png) no-repeat;background-size: 100% auto;cursor: pointer;}
+    #body1 .swiper-button-prev0 {left: 0;background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/btn_prev.png) no-repeat;background-size: 100% auto;cursor: pointer;}
+    #body1 .swiper-pagination0{position: absolute; top: 96%; left: 50%; transform: translateX(-50%);  }
+    #body1 .swiper-pagination0 span{margin-right: .15rem;  }
+    #body1 .swiper-pagination0 span:first-child{margin-left: .15rem; }
+    /* body2 */
+    #body2{ position: relative;}
+    #body2 iframe{position: absolute; top: 3.95rem;  width: 100%; height: 4.03rem;}
+    /* body3 */
+    #body3{ height: 15.25rem;position: relative; background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/m_03.jpg) no-repeat 0 0; background-size: 100%;}
+    #body3 .swiper02{ position: absolute;width:7.2rem; height: 11.26rem; top:20%; left:50%; transform: translateX(-50%); z-index:9; }
+    #body3 .swiper02 .slide_wrap {width: 7.2rem; height: 100%; margin: 0 auto;overflow: hidden; }
+    #body3 .swiper02 .swiper-wrapper{width: 100%; }
+    #body3 .swiper02 .swiper-wrapper .swiper-slide{ width: 7.2rem;position: relative; z-index: 8;  }
+    #body3 .slide_tab_area{ width: 6.68rem; position: relative; top: -5.5rem; margin: 0 auto; cursor: pointer; z-index: 12;}
+    #body3 .slide_tab_area li{width: 2.1rem; height: 1.58rem; float: left; margin-right: .1rem; }
+    #body3 .slide_tab_area li:first-child{background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_01_off_m.png) no-repeat 0 0; background-size:100%;}
+    #body3 .slide_tab_area li:first-child.active{background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_01_on_m.png) no-repeat 0 0; background-size:100%;}
+    #body3 .slide_tab_area li:nth-child(2){ background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_02_off_m.png) no-repeat 0 0; background-size:100%;}
+    #body3 .slide_tab_area li:nth-child(2).active{ background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_02_on_m.png) no-repeat 0 0; background-size:100%;}
+    #body3 .slide_tab_area li:last-child{ background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_03_off_m.png) no-repeat 0 0; background-size:100%;}
+    #body3 .slide_tab_area li:last-child.active{ background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_03_on_m.png) no-repeat 0 0; background-size:100%;}
+    #body3 .slide_tab_cnt{ width: 6.6rem; position: relative; top: -5.5rem; margin: 0 auto;}
+    #body3 .swiper-pagination0{position: absolute;top:93%;left: 50%; transform: translateX(-50%); z-index: 12; }
+    #body3 .swiper-pagination0 span{ margin-right: .15rem; transform: scale(1.2); }
+    #body3 .swiper-pagination0 span:first-child{margin-left: .2rem; }
+    /* body4 */
+    #body4{ height: 18.88rem; background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/m_04.jpg) no-repeat 0 0; background-size: 100%;}
+    #body4 .tab_area{ width: 7.2rem; height: auto; position:relative; margin: 0 auto; padding-top: 3.18rem;}
+    #body4 .tab_area li{position: absolute; }
+    #body4 .tab_area li.active{z-index: 2; }
+    #body4 .tab_area .first{ left: 0.1rem; width: 2.24rem; height: 1.34rem; background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight03_tab01_m.png) no-repeat 0 0; background-size: 100%;}
+    #body4 .tab_area .business{ left: 2.42rem; width: 2.46rem; height: 1.19rem; background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight03_tab02_m.png) no-repeat 0 0; background-size: 100%;z-index: 0;}
+    #body4 .tab_area .economy{ left: 5rem; width: 2.1rem; height: 1.28rem; background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight03_tab03_m.png) no-repeat 0 0; background-size: 100%;z-index: 0;}
+    #body4 .tab_cnt_wrap .slide_cnt{position: relative;width: 7.2rem; height: 5.84rem; z-index: 1;}
+    #body4 .tab_cnt_wrap .tab_cnt{ display: none; position: relative; top: 0.92rem;}
+    #body4 .title{position: absolute; top: 0.6rem; left:50%; transform: translateX(-50%); width: 3rem; height: 0.31rem; }
+    #body4 .pro_wrap{position: absolute; top: 1.5rem; width:7.2rem;left:50%; transform: translateX(-50%);z-index:11; overflow: hidden; }
+    #body4 .pro_wrap .swiper-wrapper{width: 100%; }
+    #body4 .pro_wrap .swiper-wrapper .swiper-slide{width: 3rem; height: 3.97rem; margin: 0 0.29rem; }
+    #body4 .pro_wrap .swiper-wrapper .swiper-slide:last-child{margin-right: 0;}
+    #body4 .swiper-button{position: absolute;transform: translateY(-50%);width: 0.75rem;height: 0.75rem; top: 55%; z-index:12;}
+    #body4 .swiper-button-next0,.swiper-button-next1,.swiper-button-next2 {right: 0;background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/btn_next_m.png) no-repeat;background-size: 100% auto;cursor: pointer;}
+    #body4 .swiper-button-prev0,.swiper-button-prev1,.swiper-button-prev2 {left: 0;background: url(http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/btn_prev_m.png) no-repeat;background-size: 100% auto;cursor: pointer;}
+  </style>
+  <div class="local_wrap">
+    <div id="bodyVisual">
+        <img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/m_visual.gif" alt="">
+        <div class="flight_visual"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/m_visual.png" alt=""></div>
+    </div><!-- // bodyVisual -->
+    <div id="body1">
+        <div class="content_wrap">
+            <div class="white_board"></div>
+            <div class="swiper01">
+                <div class="slide_wrap">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight01_img01_m.png" alt=""></li>
+                        <li class="swiper-slide"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight01_img02_m.png" alt=""></li>
+                        <li class="swiper-slide"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight01_img03_m.png" alt=""></li>
+                        <li class="swiper-slide"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight01_img04_m.png" alt=""></li>
+                    </ul><!-- // swiper-wrapper -->
+                  </div><!-- // slide_Wrap -->
+                  <div class="swiper-pagination0"></div>
+            </div><!-- // pro_wrap -->
+        </div><!-- // content_wrap-->
+    </div><!-- // body1 -->
+    <div id="body2">
+      <div class="content_wrap">
+        <img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/m_02.jpg" alt="">
+        <iframe  src="https://www.youtube.com/embed/ZELFsq46oE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div><!-- //content_wrap-->
+    </div><!-- // body2 -->
+    <div id="body3">
+        <div class="content_wrap">
+            <div class="swiper02">
+                <div class="slide_wrap">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight02_img01_m.png" alt=""></li>
+                    <li class="swiper-slide"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight02_img02_m.png" alt="">
+                        <ul class="slide_tab_area">
+                            <li class="tab1 active"></li>
+                            <li class="tab2"></li>
+                            <li class="tab3"></li>
+                        </ul>
+                        <div class="slide_tab_cnt">
+                            <div class="cnt1" style="display: block;"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_01_ex_m.png" alt=""></div>
+                            <div class="cnt2"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_02_ex_m.png" alt=""></div>
+                            <div class="cnt3"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight_img_03_ex_m.png" alt=""></div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight02_img03_m.png" alt=""></li>
+                    <li class="swiper-slide"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight02_img04_m.png" alt=""></li>
+                  </ul><!-- // swiper-wrapper -->
+                </div><!-- // slide_Wrap -->
+                <div class="swiper-pagination0"></div>
+            </div><!-- // swiper_wrap -->
+        </div><!-- //content_wrap-->
+    </div><!-- // body3 -->
+    <div id="body4">
+        <div class="content_wrap">
+            <ul class="tab_area">
+                <li class="first"></li>
+                <li class="business"></li>
+                <li class="economy"></li>
+            </ul>
+            <div class="tab_cnt_wrap">
+                <div class="tab_cnt tab_cnt1" style="display: block;">
+                    <img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight03_tab01_img_m.png" alt="">
+                    <div class="slide_cnt slide_cnt1">
+                        <div class="title"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/firts_title.png" alt=""></div>
+                        <div class="pro_wrap ">
+                            <div class="swiper-container">
+                                <ul id="swiper-wrapper" class="swiper-wrapper">
+                                  <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/308598584" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/firts_class_img01.png" alt=""></a></li>
+                                  <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/306799996" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/firts_class_img02.png" alt=""></a></li>
+                                  <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/306063582" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/firts_class_img03.png" alt=""></a></li>
+                                  <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/291341023" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/firts_class_img04.png" alt=""></a></li>
+                                  <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/257722465" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/firts_class_img05.png" alt=""></a></li>
+                                  <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/306808230" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/firts_class_img06.png" alt=""></a></li>
+                                </ul><!-- // swiper-wrapper -->
+                            </div><!-- // swiper-container -->
+                        </div><!-- //pro_wrap -->
+                        <div class="swiper-button swiper-button-prev0"></div>
+                        <div class="swiper-button swiper-button-next0"></div>
+                    </div><!-- //slide_cnt1 -->
+                </div><!-- // tab_cnt tab_cnt1 -->
+                <div class="tab_cnt tab_cnt2">
+                    <img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight03_tab02_img_m.png" alt="">
+                    <div class="slide_cnt slide_cnt2">
+                        <div class="title"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/business_title.png" alt=""></div>
+                        <div class="pro_wrap ">
+                            <div class="swiper-container">
+                                <ul id="swiper-wr class="swiper-slide"><a href="http://www.boribori.co.kr/product/291341054" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/business_class_img01.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/291341055" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/business_class_img02.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/302393380" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/business_class_img03.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/302393844" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/business_class_img04.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/290855768" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/business_class_img05.png" alt=""></a></li>
+                                    <li claapper" class="swiper-wrapper">
+                                    <liss="swiper-slide"><a href="http://www.boribori.co.kr/product/291775120" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/business_class_img06.png" alt=""></a></li>
+                                </ul><!-- // swiper-wrapper -->
+                            </div><!-- // swiper-container -->
+                      </div><!-- //pro_wrap -->
+                      <div class="swiper-button swiper-button-prev1"></div>
+                      <div class="swiper-button swiper-button-next1"></div>
+                    </div><!-- //slide_cnt2 -->
+                </div><!-- // tab_cnt tab_cnt2 -->
+                <div class="tab_cnt tab_cnt3">
+                    <img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/flight03_tab03_img_m.png" alt="">
+                    <div class="slide_cnt slide_cnt3">
+                        <div class="title"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/economy_title.png" alt=""></div>
+                        <div class="pro_wrap ">
+                            <div class="swiper-container">
+                                <ul id="swiper-wrapper" class="swiper-wrapper">
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/300475377" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/economy_class_img01.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/312665945" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/economy_class_img02.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/291775112" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/economy_class_img03.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/262413055" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/economy_class_img04.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/289249230" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/economy_class_img05.png" alt=""></a></li>
+                                    <li class="swiper-slide"><a href="http://www.boribori.co.kr/product/310040856" target="_top"><img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/economy_class_img06.png" alt=""></a></li>
+                                </ul><!-- // swiper-wrapper -->
+                            </div><!-- // swiper-container -->
+                        </div><!-- // pro_wrap -->
+                        <div class="swiper-button swiper-button-prev2"></div>
+                        <div class="swiper-button swiper-button-next2"></div>
+                    </div><!-- // slide_cnt3 -->
+                </div><!-- // slide_cnt3 tab_cnt3 -->
+            </div><!-- // tab_cnt -->
+        </div><!-- //content_wrap-->
+    </div><!-- // body4 -->
+    <div id="body5">
+        <div class="content_wrap">
+            <img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/m_05.jpg" alt="" width="720" height="1198" border="0" usemap="#m_05" class="imageMap"
+            style="border: none; height: auto; max-width: 100%; width: auto;">
+            <map name="m_05" id="m_05">
+                <area shape="rect" coords="25,200,348,623" href="http://www.boribori.co.kr/search/%ED%96%87%EB%B9%9B%EA%B0%80%EB%A6%AC%EA%B0%9C" target="_top" />
+                <area shape="rect" coords="387,229,683,663" href="http://www.boribori.co.kr/search/%25ED%259B%2584%25EB%25B0%25A9%2520%25EC%2595%2588%25EC%25A0%2584%25EA%25B1%25B0%25EC%259A%25B8" target="_top" />
+                <area shape="rect" coords="26,655,353,1133" href="http://www.boribori.co.kr/search/%EC%B9%B4%EC%8B%9C%ED%8A%B8%20%ED%8A%B8%EB%A0%88%EC%9D%B4" target="_top" />
+                <area shape="rect" coords="375,741,689,1150" href="http://www.boribori.co.kr/search/%EC%B9%B4%EC%8B%9C%ED%8A%B8%20%EB%B3%B4%ED%98%B8%EB%A7%A4%ED%8A%B8" target="_top" />
+            </map>
+        </div><!-- //content_wrap-->
+    </div><!-- // body5 -->
+    <div id="body6">
+        <div class="content_wrap">
+            <img src="http://cdn.boribori.co.kr/Images_Web/2021/20211125_br_desert_38395/m_06.jpg" alt="" width="720" height="569" border="0" usemap="#m_06" class="imageMap"
+            style="border: none; height: auto; max-width: 100%; width: auto;">
+            <map name="m_06" id="m_06">
+                <area shape="rect" coords="5,10,712,557" href="https://childsafe.or.kr/business/campaign/carseat/business-info/" target="_top" />
+            </map>
+        </div><!-- //content_wrap-->
+    </div><!-- // body6 -->
+  </div><!-- //local_wrap -->
+  <script type="text/javascript">
+    var swipes = [];
+    function kyu_slide1(){
+      $('#body1 .swiper01 .slide_wrap').each(function(i, obj){  
+        if (swipes[i] != null) {
+          swipes[i].destroy(false, true)
+        }
+        swipes[i] = new Swiper(obj,{  
+          navigation: {
+            nextEl: '#body1 .swiper-button-next'+i,
+            prevEl: '#body1 .swiper-button-prev'+i,
+          },
+          autoplay: {
+            delay:1000,
+            disableOnInteraction:true, 
+          },  
+          pagination: {
+            el: "#body1 .swiper-pagination"+i,
+            clickable: true,
+          },
+          loop:true,
+          speed:1000,
+          slidesPerView:'auto', 
+          centeredSlides:true,            
+          observer:true,
+          observeParents:true,
+          observeSlideChildren:true
+          });						
+        });
+      }
+    kyu_slide1();
+
+  var swipes2 = [];
+    function kyu_slide2(){
+      $('#body3 .swiper02 .slide_wrap').each(function(i, obj){  
+        if (swipes2[i] != null) {
+          swipes2[i].destroy(false, true)
+        }
+        swipes2[i] = new Swiper(obj,{  
+          autoplay: {
+            delay:3000,
+            disableOnInteraction:false, 
+          },  
+          pagination: {
+            el: "#body3 .swiper-pagination"+i,
+            clickable: true,
+          },
+          loop:true,
+          speed:1000,
+          slidesPerView:'auto', 
+          centeredSlides:true,            
+          observer:true,
+          observeParents:true,
+          observeSlideChildren:true
+        });						
+      });
+    }
+  kyu_slide2();
+
+  // Tab button
+  var $tabsArea1 = $('#body3 .slide_tab_area li'), $proCnt1 = $('#body3 .slide_tab_cnt [class*=cnt]'), choice = Math.floor(Math.random()*3);
+  // radndom tab
+  $tabsArea1.removeClass('active').eq(choice).addClass('active');
+  $proCnt1.hide().eq(choice).show();
+  $('#body3 .slide_tab_area .tab1').addClass('active');
+  $('#body3 .slide_tab_cnt .cnt1').show();
+  $tabsArea1.click(function(e){
+    e.preventDefault();
+    var $this1 = $(this), $thisIndex1 = $(this).index()+1;
+    $this1.siblings().removeClass('active');
+    $this1.addClass('active');
+    $proCnt1.hide();
+    $('#body3 .slide_tab_cnt .cnt'+$thisIndex1).show();	
+    return false;
+    kyu_slide2();	
+    });
+
+  var swipes3 = [];
+    function kyu_slide3(){
+      $('#body4 .slide_cnt .swiper-container').each(function(i, obj){
+            if (swipes3[i] != null) {
+                swipes3[i].destroy(false, true)
+            }
+            swipes3[i] = new Swiper(obj,{
+                navigation: {
+                    nextEl: '#body4 .swiper-button-next'+i,
+                    prevEl: '#body4 .swiper-button-prev'+i,
+                },
+                autoplay: {
+                    delay:2000,
+                    disableOnInteraction:true,
+                },
+                loop:true,
+                speed:800,
+                slidesPerView:'auto',
+                observer:true,
+                observeParents:true,
+                observeSlideChildren:true
+            });
+        });
+      }
+  kyu_slide3();
+  
+  // Tab button
+  var $tabsArea = $('#body4 .tab_area li'), $proCnt = $('#body4 .tab_cnt_wrap [class*=tab_cnt]'), choice = Math.floor(Math.random()*3);
+    // radndom tab
+    $tabsArea.removeClass('active').eq(choice).addClass('active');
+    $proCnt.hide().eq(choice).show();
+
+  $tabsArea.click(function(e){
+    e.preventDefault();
+    var $this = $(this), $thisIndex = $(this).index()+1;
+    $this.siblings().removeClass('active');
+    $this.addClass('active');
+    $proCnt.hide();
+    $('#body4 .tab_cnt_wrap .tab_cnt'+$thisIndex).show();	
+    
+    kyu_slide3();	
+    });
+
+    $(document).ready(function(e) {
+    $('.imageMap').rwdImageMaps();
+  });
+</script>
+</body>
+</html>
