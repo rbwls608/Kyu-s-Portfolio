@@ -1,0 +1,310 @@
+
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"> 
+<head> 
+   <meta charset="UTF-8"> 
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+   <title>하프클럽</title> 
+   <link href="http://static-l.halfclub.com/cdn_hp/components/assets/css/default.css" type="text/css" media="all" rel="stylesheet"> 
+   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_hp/components/assets/js/jquery-3.3.1.min.js"></script><!--v3.3.1--> 
+   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_hp/components/assets/js/swiper.min.js"></script><!--v4.4.6--> 
+   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_hp/components/assets/js/placeholders.min.js"></script><!--v4.0.1--> 
+   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_hp/components/assets/js/jquery.scrollbar.min.js"></script> 
+   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_hp/components/assets/js/zoom-image.js"></script> 
+   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_hp/components/assets/js/jquery.rating-stars.min.js"></script> 
+   <script type="text/javascript" src="http://static-l.halfclub.com/cdn_hp/components/assets/js/common.js"></script> 
+	<script type="text/javascript" src="http://static-l.halfclub.com/cdn_hp/components/assets/js/event.common.js"></script> 
+   <!--[if lt IE 9]><script type="text/javascript">document.createElement("header");document.createElement("nav");document.createElement("section");document.createElement("article");document.createElement("footer");</script><![endif]--> 
+</head>
+<body>	
+	<style>
+		area { outline:0; }
+		link, iframe, img { border:0;width:auto; }
+		ul,li{padding: 0; margin: 0;}
+		.local_wrap { position:relative;margin: 0 auto; }
+		.local_wrap * { font-weight:inherit;font-size:inherit;line-height:inherit;letter-spacing:inherit;font-family:'Malgun Gothic',Dotum,sans-serif;box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box; }
+		.content_wrap { position:relative;margin:0 auto;text-align:center;width:1140px;}
+		a { text-decoration:none;outline:none; }
+		a:focus { outline:none; }
+		/* body1 */
+		#body1 {height: 1384px; position: relative; top: -103px; background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_01.png) no-repeat center 0 ; z-index: 2; }
+		#body1 a.click_01 {position: absolute; top: 163px; right: 271px;}
+		#body1 a.click_01_on {display: none; position: absolute; top: 163px; right: 271px;}
+		#body1 a.click_02 {position: absolute; top: 557px; right: 270px;}
+		#body1 a.click_02_on {display: none; position: absolute; top: 557px; right: 270px;}
+		#body1 a.click_03 {position: absolute; top: 329px; right: 0;}
+		#body1 a.click_03_on {display: none; position: absolute; top: 329px; right: 0;}
+		/* body2 */
+		#body2 {height: 925px; background: #fff ; }
+		#body2 .pro_wrap {width: 100%; height: 740px; position: relative;}
+		#body2 .pro_list {width: 100%; max-width: 2200px; height: 100%; margin: 0 auto; }
+		#body2 .pro_list ul {width: 100%; height: 100%;}
+		#body2 .pro_list ul li {width: 100%; max-width: 2200px; height: 100%; position: relative;}
+		#body2 .pro_list ul img {position: absolute; left: 50%; transform: translateX(-31%);}
+		#body2 .pro_list ul li.slide_01 {background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_02_01.jpg) no-repeat center 0 ;}
+		#body2 .pro_list ul li.slide_02 {background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_02_02.jpg) no-repeat center 0 ;}
+		#body2 .pro_list ul li.slide_03 {background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_02_03.jpg) no-repeat center 0 ;}
+		#body2 .pro_list ul li.slide_04 {background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_02_04.jpg) no-repeat center 0 ;}
+		#body2 .pro_list ul li.slide_05 {background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_02_05.jpg) no-repeat center 0 ;}
+		#body2 .pro_list ul li.slide_06 {background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_02_06.jpg) no-repeat center 0 ;}
+		#body2 .swiper-button-prev  {width: 69px; height:39px; margin-left: -500px; position:absolute; top: 38%; left: 50%; transform:translateY(-50%);cursor:pointer; z-index:1; background:url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/btn_prev.png) no-repeat 0 0; }
+		#body2 .swiper-button-next  {width: 69px; height:39px; margin-right: -500px; position:absolute; top: 38%; right: 50%; transform:translateY(-50%);cursor:pointer; z-index:1; background:url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/btn_next.png) no-repeat 0 0; }
+		/* body3 */
+		#body3 {height: 1029px; background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_03.jpg) no-repeat center 0 ; }
+		#body3 .pro_wrap {width: 1140px; height: 445px; position: relative; top: 349px; margin: 0 auto;}
+		#body3 .pro_list {width: 529px; height: 100%; margin: 0 auto; }
+		#body3 .pro_list ul {width: 100%; height: 100%;}
+		#body3 .pro_list ul li {width: 100%; height: 100%; position: relative;}
+		#body3 .swiper-button-prev  {width: 69px; height:39px; position:absolute; top: 58%; left: 10%; transform:translateY(-50%);cursor:pointer; z-index:1; background:url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/btn_prev.png) no-repeat 0 0; }
+		#body3 .swiper-button-next  {width: 69px; height:39px; position:absolute; top: 58%; right: 10%; transform:translateY(-50%);cursor:pointer; z-index:1; background:url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/btn_next.png) no-repeat 0 0; }
+		/* body4 */
+		#body4 {height: 1013px; position: relative; background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_04.jpg) no-repeat center 0 ; }
+		#body4 .pro_wrap {width: 1140px; height: 658px; position: relative; top: 273px; margin: 0 auto; }
+		#body4 .pro_list {width: 658px; height: 760px; margin: 0 auto; top: -51px; transform: rotate(-90deg);}
+		#body4 .pro_list ul {width: 100%; height: 100%;}
+		#body4 .pro_list ul li {width: 760px; height: 760px; transform: rotate(90deg); position: relative;}
+		#body4 .pro_list ul li a {display: block; position: absolute; }
+		#body4 .pro_list ul li a.link_01 {top: 50px; left: 0;}
+		#body4 .pro_list ul li a.link_02 {top: 130px; left: 250px;}
+		#body4 .pro_list ul li a.link_03 {bottom: 90px; right: 0;}
+		#body4 .pro_list ul li a.link_04 {top: 97px; left: -33px;}
+		#body4 .pro_list ul li a.link_05 {top: 147px; left: 233px;}
+		#body4 .pro_list ul li a.link_06 {top: 187px; right: 0;}
+		#body4 .pro_list ul li a.link_07 {top: 50px; left: 0;}
+		#body4 .pro_list ul li a.link_08 {top: 161px; left: 247px;}
+		#body4 .pro_list ul li a.link_09 {bottom: 70px; right: 0;}
+		#body4 .swiper-button-prev  {width: 44px; height:41px; position:absolute; top: 6.5%; left: 48%; transform:translateY(-50%);cursor:pointer; z-index:1; background:url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/btn_prev_02.png) no-repeat 0 0; background-size: 100%;}
+		#body4 .swiper-button-next  {width: 44px; height:41px; position:absolute; top: 100%; left: 48%; transform:translateY(-50%);cursor:pointer; z-index:1; background:url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/btn_next_02.png) no-repeat 0 0; background-size: 100%;}
+		/* body5 */
+		#body5 {position: relative; background: url(http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_05.jpg) no-repeat center 0 ; }
+		#body5 .btn_click{position: absolute; top: 755px; left: 177px; animation: 1s ease-in-out click infinite; cursor: auto;}
+
+		/* animation keyframe */
+		@keyframes click{
+			0%{transform: translateY(0%);}
+			50%{transform: translateY(22%);}
+			100%{transform: translateY(0%);}
+		}
+	</style>
+	<div class="local_wrap"> 
+		<div id="bodyVisual">
+			<img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/bg_visual.gif" alt="">
+		</div><!-- // bodyVisual -->
+		<div id="body1">
+			<div class="content_wrap">
+				<a class="click_01"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/click_01.png" alt=""></a>
+				<a class="click_01_on"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/click_01_on.png" alt=""></a>
+				<a class="click_02"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/click_02.png" alt=""></a>
+				<a class="click_02_on"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/click_02_on.png" alt=""></a>
+				<a class="click_03"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/click_03.png" alt=""></a>
+				<a class="click_03_on"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/click_03_on.png" alt=""></a>
+			</div><!-- // content_wrap -->
+		</div><!-- // body1 -->
+		<div id="body2">
+			<div class="content_wrap">
+				<img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/w_02.jpg" alt="">
+			</div><!-- // content_wrap -->
+			<div class="pro_wrap">	
+				<div class="pro_list swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="slide_01 swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body2_slide_01.png" alt=""></li>		
+						<li class="slide_02 swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body2_slide_02.png" alt=""></li>		
+						<li class="slide_03 swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body2_slide_03.png" alt=""></li>		
+						<li class="slide_04 swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body2_slide_04.png" alt=""></li>		
+						<li class="slide_05 swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body2_slide_05.png" alt=""></li>		
+						<li class="slide_06 swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body2_slide_06.png" alt=""></li>		
+					</ul>	
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div><!-- // pro_wrap -->
+		</div><!-- // body2 -->
+		<div id="body3">
+			<div class="pro_wrap">	
+				<div class="pro_list swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body3_slide_01.png" alt=""></li>		
+						<li class="swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body3_slide_02.png" alt=""></li>		
+						<li class="swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body3_slide_03.png" alt=""></li>		
+						<li class="swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body3_slide_04.png" alt=""></li>		
+						<li class="swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body3_slide_05.png" alt=""></li>		
+						<li class="swiper-slide"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body3_slide_06.png" alt=""></li>		
+					</ul>	
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div><!-- // pro_wrap -->
+		</div><!-- // body3 -->
+		<div id="body4">
+			<div class="pro_wrap">	
+				<div class="pro_list swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="http://www.halfclub.com/product/316132722" target="_blank" class="link_01"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_01.png" alt=""></a>
+							<a href="http://www.halfclub.com/product/316132711" target="_blank" class="link_02"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_02.png" alt=""></a>
+							<a href="http://www.halfclub.com/product/316132686" target="_blank" class="link_03"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_03.png" alt=""></a>
+						</li>		
+						<li class="swiper-slide">
+							<a href="http://www.halfclub.com/product/159078314" target="_blank" class="link_04"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_04.png" alt=""></a>
+							<a href="http://www.halfclub.com/product/313965785" target="_blank" class="link_05"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_05.png" alt=""></a>
+							<a href="http://www.halfclub.com/product/317713201" target="_blank" class="link_06"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_06.png" alt=""></a>
+						</li>		
+						<li class="swiper-slide">
+							<a href="http://www.halfclub.com/product/315952587" target="_blank" class="link_07"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_07.png" alt=""></a>
+							<a href="http://www.halfclub.com/product/315227594" target="_blank" class="link_08"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_08.png" alt=""></a>
+							<a href="http://www.halfclub.com/product/310650168" target="_blank" class="link_09"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/body4_slide_09.png" alt=""></a>
+						</li>		
+					</ul>	
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div><!-- // pro_wrap -->
+		</div><!-- // body4 -->
+		<div id="body5">
+			<div class="content_wrap">
+				<a class="btn_click"><img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/btn_click.png" alt=""></a>
+				<img src="http://cdn.halfclub.com/Images_Web/2022/20220126_hf_desert_46216/w_05.jpg" alt="" border="0" usemap="#w_05">
+				<map name="w_05" id="w_05">
+				  <area shape="rect" coords="51,169,184,353" href="http://www.halfclub.com/product/315075977" target="_blank" />
+				  <area shape="rect" coords="200,163,321,355" href="http://www.halfclub.com/product/308836388" target="_blank" />
+				  <area shape="rect" coords="335,166,446,352" href="http://www.halfclub.com/product/186788670" target="_blank" />
+				  <area shape="rect" coords="466,165,560,353" href="http://www.halfclub.com/product/317035134" target="_blank" />
+				  <area shape="rect" coords="568,169,663,353" href="http://www.halfclub.com/product/313015379" target="_blank" />
+				  <area shape="rect" coords="670,166,768,354" href="http://www.halfclub.com/product/315070158" target="_blank" />
+				  <area shape="rect" coords="776,167,891,351" href="http://www.halfclub.com/product/181511396" target="_blank" />
+				  <area shape="rect" coords="898,166,997,352" href="http://www.halfclub.com/product/146474868" target="_blank" />
+				  <area shape="rect" coords="1000,165,1118,354" href="http://www.halfclub.com/product/317712850" target="_blank" />
+				  <area shape="poly" coords="136,989,142,1285,241,1284,235,990,185,964,136,987" href="http://www.halfclub.com/product/147976107" target="_blank" />
+				  <area shape="poly" coords="178,944,246,989,252,1244,354,1234,379,1053,320,875,258,873,177,941" href="http://www.halfclub.com/product/315952587" target="_blank" />
+				  <area shape="rect" coords="439,875,517,953" href="http://www.halfclub.com/product/314844688" target="_blank" />
+				  <area shape="poly" coords="442,805,441,838,523,879,523,951,581,953,571,811,453,790,441,798" href="http://www.halfclub.com/product/315246101" target="_blank" />
+				  <area shape="poly" coords="926,1121,977,1192,988,1261,1033,1259,1055,1115,987,1077,927,1116" href="http://www.halfclub.com/product/316132722" target="_blank" />
+				  <area shape="rect" coords="388,1185,579,1300" href="http://www.halfclub.com/product/317062161" target="_blank" />
+				  <area shape="rect" coords="388,1089,490,1184" href="http://www.halfclub.com/product/315184978" target="_blank" />
+				  <area shape="poly" coords="324,1260,311,1313,372,1350,543,1371,746,1355,836,1307,779,1245,745,1238,742,1285,661,1301,384,1304,371,1248" href="http://www.halfclub.com/product/314660199" target="_blank" />
+				  <area shape="rect" coords="586,1135,738,1288" href="http://www.halfclub.com/product/316779855" target="_blank" />
+				  <area shape="poly" coords="778,1046,772,1222,783,1245,861,1246,858,1175,905,1171,883,1041,784,1042" href="http://www.halfclub.com/product/314481391" target="_blank" />
+				  <area shape="rect" coords="861,1176,969,1310" href="http://www.halfclub.com/product/181511396" target="_blank" />
+				  <area shape="rect" coords="893,775,1042,1078" href="http://www.halfclub.com/product/310650168" target="_blank" />
+				  <area shape="poly" coords="358,958,389,1052,387,1082,497,1087,503,1170,580,1173,587,1124,749,1130,777,1038,885,1032,883,954,361,956" href="http://www.halfclub.com/product/315224214" target="_blank" />
+				  <area shape="rect" coords="717,748,855,946" href="http://www.halfclub.com/product/159078314" target="_blank" />
+				  <area shape="poly" coords="671,860,641,909,670,954,716,951,712,855,672,856" href="http://www.halfclub.com/product/311525672" target="_blank" />
+				  <area shape="rect" coords="539,671,698,801" href="http://www.halfclub.com/product/313965785" target="_blank" />
+				  <area shape="rect" coords="346,767,436,950" href="http://www.halfclub.com/product/187886348" target="_blank" />
+				</map>
+			</div><!-- // content_wrap -->
+		</div><!-- // body5 -->
+	</div><!-- // local_wrap -->
+	
+	<script type="text/javascript">
+		var swipes = [];
+			function kyu_slide(){
+				$('#body2 .swiper-container').each(function(i, obj){  
+					if (swipes[i] != null) {
+						swipes[i].destroy(false, true)
+					}
+					swipes[i] = new Swiper(obj,{  
+						navigation: {
+							nextEl: '#body2 .swiper-button-next',
+							prevEl: '#body2 .swiper-button-prev',
+						},
+						autoplay: {
+							delay:2000,
+							disableOnInteraction:true, 
+						},  
+						loop:true,
+						speed:2000,
+						slidesPerView:'auto', 
+						centeredSlides:true,            
+						observer:true,
+						observeParents:true,
+						observeSlideChildren:true
+					});						
+				});
+			}
+			kyu_slide();
+		
+		var swipes2 = [];
+			function kyu_slide2(){
+				$('#body3 .swiper-container').each(function(i, obj){  
+					if (swipes2[i] != null) {
+						swipes2[i].destroy(false, true)
+					}
+					swipes2[i] = new Swiper(obj,{  
+						navigation: {
+							nextEl: '#body3 .swiper-button-next',
+							prevEl: '#body3 .swiper-button-prev',
+						},
+						autoplay: {
+							delay:2500,
+							disableOnInteraction:true, 
+						},  
+						loop:true,
+						speed:1000,
+						slidesPerView:'auto', 
+						centeredSlides:true,            
+						observer:true,
+						observeParents:true,
+						observeSlideChildren:true
+					});						
+				});
+			}
+			kyu_slide2();
+
+		var swipes3 = [];
+			function kyu_slide3(){
+				$('#body4 .swiper-container').each(function(i, obj){  
+					if (swipes3[i] != null) {
+						swipes3[i].destroy(false, true)
+					}
+					swipes3[i] = new Swiper(obj,{  
+						navigation: {
+							nextEl: '#body4 .swiper-button-next',
+							prevEl: '#body4 .swiper-button-prev',
+						},
+						autoplay: {
+							delay:2800,
+							disableOnInteraction:true, 
+						},  
+						loop:true,
+						speed:1000,
+						slidesPerView:'auto', 
+						centeredSlides:true,            
+						observer:true,
+						observeParents:true,
+						observeSlideChildren:true
+					});						
+				});
+			}
+			kyu_slide3();
+
+			$(function(){
+				var click_01 = $('#body1 .click_01'), click_01_on = $('#body1 .click_01_on'),
+				click_02 = $('#body1 .click_02'), click_02_on = $('#body1 .click_02_on'), 
+				click_03 = $('#body1 .click_03'), click_03_on = $('#body1 .click_03_on');				
+				
+				click_01.click(function(){
+					click_01_on.show();
+				});
+				click_01_on.click(function(){
+					click_01_on.hide();
+				});
+
+				click_02.click(function(){
+					click_02_on.show();
+				});
+				click_02_on.click(function(){
+					click_02_on.hide();
+				});
+
+				click_03.click(function(){
+					click_03_on.show();
+				});
+				click_03_on.click(function(){
+					click_03_on.hide();
+				});
+			
+			});
+	</script>
+</body>
+</html>
